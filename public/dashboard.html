@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - LingoPair</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <div class="dashboard-container">
@@ -22,20 +21,20 @@
                 <li><a href="#leaderboard">🏆 Leaderboard</a></li>
                 <li><a href="#profile">👤 Perfil</a></li>
                 <li><a href="#settings">⚙️ Configuración</a></li>
-                <li><a href="#logout">🚪 Cerrar Sesión</a></li>
+                <li><a href="index.html">🚪 Cerrar Sesión</a></li>
             </nav>
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            <!-- HEADER -->
+            <!-- DASHBOARD HEADER -->
             <div class="dashboard-header">
                 <div class="user-info">
-                    <h1>Bienvenido, Usuario!</h1>
+                    <h1>Bienvenido, Guillem! 👋</h1>
                     <p>Sigue mejorando tu inglés</p>
                 </div>
                 <div class="user-profile">
-                    <div class="avatar">A</div>
+                    <div class="avatar">G</div>
                     <div>
                         <strong>Guillem Guti</strong>
                         <p style="color: #64748b; font-size: 0.9rem;">Nivel B2</p>
@@ -43,7 +42,7 @@
                 </div>
             </div>
 
-            <!-- STATS -->
+            <!-- STATS GRID -->
             <div class="stats-grid">
                 <div class="stat-card success">
                     <div class="stat-label">Experiencia (XP)</div>
@@ -73,41 +72,71 @@
                 </div>
             </div>
 
-            <!-- CONVERSATIONS -->
+            <!-- QUICK ACTIONS -->
+            <div class="quick-actions">
+                <a href="#" class="action-btn primary-action">
+                    <span>💬</span>
+                    <div>
+                        <h4>Nueva Conversación</h4>
+                        <p>Conecta con un nuevo compañero</p>
+                    </div>
+                </a>
+                <a href="#" class="action-btn secondary-action">
+                    <span>👥</span>
+                    <div>
+                        <h4>Encontrar Compañero</h4>
+                        <p>Explora recomendaciones</p>
+                    </div>
+                </a>
+                <a href="#" class="action-btn tertiary-action">
+                    <span>🎯</span>
+                    <div>
+                        <h4>Mi Progreso</h4>
+                        <p>Ver estadísticas detalladas</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CONVERSATIONS SECTION -->
             <div class="dashboard-section">
                 <div class="section-header">
                     <h2>💬 Conversaciones Recientes</h2>
-                    <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver todas</a>
+                    <a href="#" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Ver todas</a>
                 </div>
 
-                <div class="conversation-item">
-                    <div class="conversation-info">
-                        <h3>Alex Johnson</h3>
-                        <p>Hablando sobre viajes</p>
+                <div class="conversation-list">
+                    <div class="conversation-item">
+                        <div class="conversation-avatar">A</div>
+                        <div class="conversation-info">
+                            <h3>Alex Johnson</h3>
+                            <p>Hablando sobre viajes</p>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">Hace 2 horas</div>
+                            <div class="conversation-unread">3</div>
+                        </div>
                     </div>
-                    <div class="conversation-meta">
-                        <div class="conversation-time">Hace 2 horas</div>
-                        <div class="conversation-unread">3</div>
-                    </div>
-                </div>
 
-                <div class="conversation-item">
-                    <div class="conversation-info">
-                        <h3>María García</h3>
-                        <p>Conversación sobre películas</p>
+                    <div class="conversation-item">
+                        <div class="conversation-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">M</div>
+                        <div class="conversation-info">
+                            <h3>María García</h3>
+                            <p>Conversación sobre películas</p>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">Hace 5 horas</div>
+                        </div>
                     </div>
-                    <div class="conversation-meta">
-                        <div class="conversation-time">Hace 5 horas</div>
-                    </div>
-                </div>
 
-                <div class="conversation-item">
-                    <div class="conversation-info">
-                        <h3>Jiho Park</h3>
-                        <p>Práctica de pronunciación</p>
-                    </div>
-                    <div class="conversation-meta">
-                        <div class="conversation-time">Ayer</div>
+                    <div class="conversation-item">
+                        <div class="conversation-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">J</div>
+                        <div class="conversation-info">
+                            <h3>Jiho Park</h3>
+                            <p>Práctica de pronunciación</p>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">Ayer</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,43 +145,61 @@
             <div class="dashboard-section">
                 <div class="section-header">
                     <h2>👥 Compañeros Recomendados</h2>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Ver más</a>
                 </div>
 
                 <div class="partners-grid">
                     <div class="partner-card">
                         <div class="partner-avatar">A</div>
                         <div class="partner-name">Anna Taylor</div>
-                        <div class="partner-language">🇬🇧 Inglés Nativo</div>
+                        <div class="partner-info">
+                            <span class="badge">🇬🇧 Inglés Nativo</span>
+                            <span class="badge">B2+</span>
+                        </div>
+                        <p class="partner-bio">Le encanta viajar y hablar de películas. Paciente y amable.</p>
                         <button class="connect-btn">Conectar</button>
                     </div>
 
                     <div class="partner-card">
-                        <div class="partner-avatar">K</div>
+                        <div class="partner-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">K</div>
                         <div class="partner-name">Kai Yamamoto</div>
-                        <div class="partner-language">🇯🇵 Japonés Nativo</div>
+                        <div class="partner-info">
+                            <span class="badge">🇯🇵 Japonés Nativo</span>
+                            <span class="badge">B1</span>
+                        </div>
+                        <p class="partner-bio">Especialista en conversación casual. Aprende rápido.</p>
                         <button class="connect-btn">Conectar</button>
                     </div>
 
                     <div class="partner-card">
-                        <div class="partner-avatar">E</div>
+                        <div class="partner-avatar" style="background: linear-gradient(135deg, #ef4444, #dc2626);">E</div>
                         <div class="partner-name">Elena Rossi</div>
-                        <div class="partner-language">🇮🇹 Italiano Nativo</div>
+                        <div class="partner-info">
+                            <span class="badge">🇮🇹 Italiano Nativo</span>
+                            <span class="badge">C1</span>
+                        </div>
+                        <p class="partner-bio">Excelente para pronunciación. Enseña con pasión.</p>
                         <button class="connect-btn">Conectar</button>
                     </div>
 
                     <div class="partner-card">
-                        <div class="partner-avatar">M</div>
+                        <div class="partner-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">M</div>
                         <div class="partner-name">Marco Franco</div>
-                        <div class="partner-language">🇪🇸 Español Nativo</div>
+                        <div class="partner-info">
+                            <span class="badge">🇪🇸 Español Nativo</span>
+                            <span class="badge">C2</span>
+                        </div>
+                        <p class="partner-bio">Profesor certificado. Muy responsable y dedicado.</p>
                         <button class="connect-btn">Conectar</button>
                     </div>
                 </div>
             </div>
 
-            <!-- LEADERBOARD -->
+            <!-- LEADERBOARD SECTION -->
             <div class="dashboard-section">
                 <div class="section-header">
-                    <h2>🏆 Leaderboard Global</h2>
+                    <h2>🏆 Top 5 Aprendices</h2>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Leaderboard Completo</a>
                 </div>
 
                 <table class="leaderboard-table">
@@ -167,39 +214,39 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="rank gold">🥇 1</span></td>
+                            <td><span class="rank gold">🥇</span></td>
                             <td><strong>Sarah Chen</strong></td>
                             <td>C2</td>
                             <td>45,230</td>
-                            <td>89 días</td>
+                            <td>89 días 🔥</td>
                         </tr>
                         <tr>
-                            <td><span class="rank silver">🥈 2</span></td>
+                            <td><span class="rank silver">🥈</span></td>
                             <td><strong>Lucas Silva</strong></td>
                             <td>C1</td>
                             <td>38,900</td>
-                            <td>76 días</td>
+                            <td>76 días 🔥</td>
                         </tr>
                         <tr>
-                            <td><span class="rank bronze">🥉 3</span></td>
+                            <td><span class="rank bronze">🥉</span></td>
                             <td><strong>Anna Kowalski</strong></td>
                             <td>B2</td>
                             <td>35,450</td>
-                            <td>62 días</td>
+                            <td>62 días 🔥</td>
                         </tr>
                         <tr>
-                            <td class="rank">4</td>
+                            <td class="rank-number">4</td>
                             <td><strong>Yuki Tanaka</strong></td>
                             <td>B2</td>
                             <td>32,120</td>
-                            <td>58 días</td>
+                            <td>58 días 🔥</td>
                         </tr>
-                        <tr style="background-color: #e0e7ff;">
-                            <td class="rank">5</td>
+                        <tr class="highlight-row">
+                            <td class="rank-number">5</td>
                             <td><strong>Tú (Guillem)</strong></td>
                             <td>B2</td>
                             <td>28,450</td>
-                            <td>15 días</td>
+                            <td>15 días 🔥</td>
                         </tr>
                     </tbody>
                 </table>
