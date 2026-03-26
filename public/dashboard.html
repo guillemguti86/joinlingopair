@@ -1,40 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LingoPair Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard - LingoPair</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <header>
-        <h1>LingoPair Dashboard</h1>
-    </header>
-    <main>
-        <section id="user-stats">
-            <h2>User Statistics</h2>
-            <p>XP Progress: 85%</p>
-            <p>Daily Streak: 5 days</p>
-        </section>
-        <section id="recent-conversations">
-            <h2>Recent Conversations</h2>
-            <ul>
-                <li>Conversation with Alex on Spanish</li>
-                <li>Conversation with Maria on French</li>
-                <li>Conversation with Jiho on Korean</li>
-            </ul>
-        </section>
-        <section id="language-partners">
-            <h2>Language Partners Recommendations</h2>
-            <ul>
-                <li>Anna - English (B2)</li>
-                <li>Kai - Japanese (B1)</li>
-                <li>Elena - Italian (C1)</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 LingoPair</p>
-    </footer>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🌍 LingoPair</h2>
+                <p>Aprende Idiomas</p>
+            </div>
+            <nav class="sidebar-nav">
+                <li><a href="#dashboard" class="active">📊 Dashboard</a></li>
+                <li><a href="#conversations">💬 Conversaciones</a></li>
+                <li><a href="#partners">👥 Compañeros</a></li>
+                <li><a href="#leaderboard">🏆 Leaderboard</a></li>
+                <li><a href="#profile">👤 Perfil</a></li>
+                <li><a href="#settings">⚙️ Configuración</a></li>
+                <li><a href="#logout">🚪 Cerrar Sesión</a></li>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <div class="dashboard-header">
+                <div class="user-info">
+                    <h1>Bienvenido, Usuario!</h1>
+                    <p>Sigue mejorando tu inglés</p>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Guillem Guti</strong>
+                        <p style="color: #64748b; font-size: 0.9rem;">Nivel B2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-grid">
+                <div class="stat-card success">
+                    <div class="stat-label">Experiencia (XP)</div>
+                    <div class="stat-value">2,450</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 85%;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 10px;">725 XP hasta el siguiente nivel</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Racha Diaria</div>
+                    <div class="stat-value">15</div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 10px;">🔥 ¡Mantén la racha!</p>
+                </div>
+
+                <div class="stat-card warning">
+                    <div class="stat-label">Conversaciones</div>
+                    <div class="stat-value">42</div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 10px;">Total completadas</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Idioma Estudiando</div>
+                    <div class="stat-value">EN</div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 10px;">Inglés - Nivel B2</p>
+                </div>
+            </div>
+
+            <!-- CONVERSATIONS -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>💬 Conversaciones Recientes</h2>
+                    <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver todas</a>
+                </div>
+
+                <div class="conversation-item">
+                    <div class="conversation-info">
+                        <h3>Alex Johnson</h3>
+                        <p>Hablando sobre viajes</p>
+                    </div>
+                    <div class="conversation-meta">
+                        <div class="conversation-time">Hace 2 horas</div>
+                        <div class="conversation-unread">3</div>
+                    </div>
+                </div>
+
+                <div class="conversation-item">
+                    <div class="conversation-info">
+                        <h3>María García</h3>
+                        <p>Conversación sobre películas</p>
+                    </div>
+                    <div class="conversation-meta">
+                        <div class="conversation-time">Hace 5 horas</div>
+                    </div>
+                </div>
+
+                <div class="conversation-item">
+                    <div class="conversation-info">
+                        <h3>Jiho Park</h3>
+                        <p>Práctica de pronunciación</p>
+                    </div>
+                    <div class="conversation-meta">
+                        <div class="conversation-time">Ayer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANGUAGE PARTNERS -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>👥 Compañeros Recomendados</h2>
+                </div>
+
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-avatar">A</div>
+                        <div class="partner-name">Anna Taylor</div>
+                        <div class="partner-language">🇬🇧 Inglés Nativo</div>
+                        <button class="connect-btn">Conectar</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-avatar">K</div>
+                        <div class="partner-name">Kai Yamamoto</div>
+                        <div class="partner-language">🇯🇵 Japonés Nativo</div>
+                        <button class="connect-btn">Conectar</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-avatar">E</div>
+                        <div class="partner-name">Elena Rossi</div>
+                        <div class="partner-language">🇮🇹 Italiano Nativo</div>
+                        <button class="connect-btn">Conectar</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-avatar">M</div>
+                        <div class="partner-name">Marco Franco</div>
+                        <div class="partner-language">🇪🇸 Español Nativo</div>
+                        <button class="connect-btn">Conectar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEADERBOARD -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>🏆 Leaderboard Global</h2>
+                </div>
+
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Usuario</th>
+                            <th>Nivel</th>
+                            <th>XP Total</th>
+                            <th>Racha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rank gold">🥇 1</span></td>
+                            <td><strong>Sarah Chen</strong></td>
+                            <td>C2</td>
+                            <td>45,230</td>
+                            <td>89 días</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rank silver">🥈 2</span></td>
+                            <td><strong>Lucas Silva</strong></td>
+                            <td>C1</td>
+                            <td>38,900</td>
+                            <td>76 días</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rank bronze">🥉 3</span></td>
+                            <td><strong>Anna Kowalski</strong></td>
+                            <td>B2</td>
+                            <td>35,450</td>
+                            <td>62 días</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">4</td>
+                            <td><strong>Yuki Tanaka</strong></td>
+                            <td>B2</td>
+                            <td>32,120</td>
+                            <td>58 días</td>
+                        </tr>
+                        <tr style="background-color: #e0e7ff;">
+                            <td class="rank">5</td>
+                            <td><strong>Tú (Guillem)</strong></td>
+                            <td>B2</td>
+                            <td>28,450</td>
+                            <td>15 días</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
