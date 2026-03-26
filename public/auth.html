@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación - LingoPair</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- LEFT SIDE - BRANDING -->
+        <div class="auth-left">
+            <div class="auth-branding">
+                <h1>🌍 LingoPair</h1>
+                <p>Aprende idiomas conectando con personas reales</p>
+            </div>
+            <div class="auth-benefits">
+                <div class="benefit">
+                    <span>✅</span>
+                    <p>Conversaciones auténticas con hablantes nativos</p>
+                </div>
+                <div class="benefit">
+                    <span>✅</span>
+                    <p>Progresa a tu ritmo con gamificación</p>
+                </div>
+                <div class="benefit">
+                    <span>✅</span>
+                    <p>Comunidad activa y compañeros comprometidos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE - FORMS -->
+        <div class="auth-right">
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Inicia Sesión</button>
+                <button class="tab-btn" onclick="switchTab('register')">Regístrate</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div class="auth-form active" id="login-form">
+                <h2>Bienvenido de Vuelta</h2>
+                <p>Inicia sesión para continuar aprendiendo</p>
+
+                <form class="form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Recuérdame</span>
+                        </label>
+                        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-large btn-primary full-width">
+                        Inicia Sesión
+                    </button>
+                </form>
+
+                <div class="divider">O continúa con</div>
+
+                <div class="social-login">
+                    <button class="social-btn google">
+                        <span>🔵</span> Google
+                    </button>
+                    <button class="social-btn github">
+                        <span>⚫</span> GitHub
+                    </button>
+                </div>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div class="auth-form" id="register-form">
+                <h2>Comienza tu Viaje</h2>
+                <p>Crea una cuenta para empezar a aprender hoy</p>
+
+                <form class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="register-name">Nombre Completo</label>
+                            <input type="text" id="register-name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-country">País</label>
+                            <select id="register-country" required>
+                                <option>Selecciona tu país</option>
+                                <option>España</option>
+                                <option>México</option>
+                                <option>Argentina</option>
+                                <option>Colombia</option>
+                                <option>Chile</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="register-language">Idioma a Aprender</label>
+                            <select id="register-language" required>
+                                <option>Selecciona un idioma</option>
+                                <option>Inglés</option>
+                                <option>Francés</option>
+                                <option>Alemán</option>
+                                <option>Japonés</option>
+                                <option>Coreano</option>
+                                <option>Chino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-level">Nivel</label>
+                            <select id="register-level" required>
+                                <option>A1 - Principiante</option>
+                                <option>A2 - Básico</option>
+                                <option>B1 - Intermedio</option>
+                                <option>B2 - Intermedio Alto</option>
+                                <option>C1 - Avanzado</option>
+                                <option>C2 - Dominio Completo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-password">Contraseña</label>
+                        <input type="password" id="register-password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-confirm">Confirmar Contraseña</label>
+                        <input type="password" id="register-confirm" placeholder="••••••••" required>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span>Acepto los <a href="#">términos de servicio</a> y la <a href="#">política de privacidad</a></span>
+                    </label>
+
+                    <button type="submit" class="btn btn-large btn-primary full-width">
+                        Crear Cuenta
+                    </button>
+                </form>
+
+                <div class="divider">O regístrate con</div>
+
+                <div class="social-login">
+                    <button class="social-btn google">
+                        <span>🔵</span> Google
+                    </button>
+                    <button class="social-btn github">
+                        <span>⚫</span> GitHub
+                    </button>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <p class="auth-footer">
+                ¿Necesitas ayuda? <a href="#">Contacta con Soporte</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all forms
+            document.querySelectorAll('.auth-form').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected form
+            document.getElementById(tabName + '-form').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Redirect to dashboard on form submit
+        document.querySelectorAll('.auth-form form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                window.location.href = 'dashboard.html';
+            });
+        });
+    </script>
+</body>
+</html>
